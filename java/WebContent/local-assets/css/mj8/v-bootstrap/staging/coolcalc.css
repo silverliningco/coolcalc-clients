@@ -1,0 +1,421 @@
+:root {
+    --primary-color: #0075DB;
+    --primary-dark-color: #134E91;
+    --accent-color: #E4D340;
+    --bg-page-color: #F9F9F9;
+    --bg-sidenav-color: #EFEFEF;
+    --primary-text-color: #6E6E6E;
+    --primary-dark-text-color:#4E4E4E;
+    --secondary-text-color: #FFF;
+    --new-color: #ffbb33;
+    --complete-color: #01BD62;
+    --pending-color: #ff5722;
+    --disabled-color: #C6CECC;
+    --font-size: .875rem;
+}
+
+*{
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: var(--primary-text-color);
+    font-size: var(--font-size);
+    background-color: var(--bg-page-color);
+}
+.header {
+    background-color: var(--primary-color);
+}
+.white-bg{
+    background-color: #ffffff;
+}
+
+/* breadcrumb */
+.breadcrumb-item button.btn {
+    color: var(--disabled-color);
+}
+.breadcrumb-item:last-child button.btn {
+    color: var(--primary-dark-text-color);
+}
+.breadcrumb-item .dropdown-menu {
+    z-index: 1001;
+}
+.breadcrumb-item .dropdown-menu li {
+    font-weight: 400;
+    color: #212529;
+    background-color: transparent;
+}
+.breadcrumb .breadcrumb-item .dropdown-menu button {
+    background-color: var(--primary-color);
+    color: #fff;
+    font-weight: 400;
+    font-size: 1rem;
+    text-transform: uppercase;
+}
+
+/* buttons */
+.btn-primary {
+    background-color: var(--primary-color);
+}
+.btn-outline {
+    background-color: transparent !important;
+    border: 2px solid var(--primary-color) !important;
+}
+.btn-outline.primary {
+    color: var(--primary-color) !important;
+    border-color: var(--primary-color) !important;
+}
+.btn-outline.secondary {
+    background-color: #fff;
+    color: var(--primary-text-color) !important;
+    border-color: var(--primary-text-color) !important;
+}
+.btn-rounded {
+    border-radius: 10em;
+}
+
+/* primary progress bar */
+.navbar-nav.mobile-bar {
+    margin: 0px 0px;
+    background-color: var(--primary-color);
+    border-radius: .625rem;
+}
+.navbar-nav.mobile-bar > li {
+    color: #fff !important;
+    padding: .875rem 0;
+}
+.navbar-nav.mobile-bar > li > span {
+    color: #fff !important;
+    text-transform: uppercase;
+    font-size: .875rem;
+    font-weight: bold;
+} 
+.menu-icon > i {
+    font-size: 35px !important;
+    color: #fff;
+}
+.mobile-bar li.active {
+    background-color: var(--primary-dark-color);
+}
+
+/* secondary nav */
+.secondary-nav ul > li {
+    border-bottom: 1px solid var(--disabled-color);
+    border-left: 5px solid var(--primary-dark-text-color);
+}
+.secondary-nav ul > li.active {
+    border-left: 5px solid var(--primary-color);
+    background-color: var(--bg-sidenav-color);
+} 
+.secondary-nav ul li.active span.resource-icon:before,
+.secondary-nav ul li.active {
+    color: var(--primary-color);
+}
+/* custom icons of MJ8Report in tables MJ8Projects and HVACSystems */
+[data-khipu-role="MJ8Projects"] .MJ8Reports:after,
+[data-khipu-role="HVACSystems"] .MJ8Report:after {   
+    color: var(--primary-color);
+    font-size: 1.8rem;
+}
+
+/* navigation tabs style */
+#cf-overview-nav, #cc-detail-nav {
+    background: white;
+    font-weight: bold;
+    font-size: 12px;
+    box-shadow: 1px 1px 1px rgba(0,0,0,0.2);
+    cursor: pointer;
+}
+#cf-overview-nav .nav-link.active, #cc-detail-nav .nav-link.active {
+    background-color: var(--bg-sidenav-color);
+    color: var(--primary-color);
+    border-radius: 0;
+}
+
+/* title */
+.title {
+    color: var(--primary-color);
+    margin-left: 3rem;
+}
+.icon {
+    background-color: var(--primary-color);
+    border-radius: 50%;
+    position: absolute;
+    height: 38px;
+    width: 38px;
+}
+.icon i, .icon span.resource-icon {
+    position: relative;
+    top: calc(50% - 12px);
+    color: #fff;
+    font-size: 22px;
+}
+.underline{
+    border-bottom: solid 5px var(--accent-color);
+    width: 50px;
+    margin-left: 3rem;
+}
+
+/* table style */
+table thead {
+    background-color: var(--primary-color);
+    color: var(--secondary-text-color);
+}
+
+/* form style */
+form.form{
+    margin-left: 3.06rem;
+}
+
+/* form error message style */
+form .error-msg {
+    display: block;
+    color: #dc3545;    
+    font-size: 90%;
+}
+form .error-msg:before {   
+    font-family: "Font Awesome 5 Free";
+    content: "\f06a";
+    font-weight: 900;
+    margin-right: .3rem;
+}
+
+/* general status icons */
+.state-icon {
+    color: #fff;
+}
+
+/* resource icons */
+.secondary-nav ul li span.resource-icon:before {
+    color: var(--primary-dark-text-color);
+}
+span.resource-icon {
+    color: #fff;
+}
+
+/* nice radio */
+.nice-radio input[type="radio"] + label .btn{    
+    color: var(--primary-text-color);
+    background-color: #fff;
+}
+.nice-radio input[type="radio"] + label .icon{
+    min-width: 50px;
+    min-height: 50px;
+    position: relative;    
+    background-color: var(--primary-text-color);
+    border-radius: 50%;
+}
+.nice-radio input[type="radio"] + label i{
+    position: relative;
+    top: calc(50% - 12px);    
+    color: #fff;
+    font-size: 22px;
+}
+.nice-radio input[type="radio"]:checked+label .btn{
+    color: #fff;
+    background-color: var(--primary-color);
+}
+.nice-radio input[type="radio"]:checked+label .icon{
+    background-color: #fff;
+}
+.nice-radio input[type="radio"]:checked+label i{
+    color: var(--primary-color);
+}
+.nice-radio input[type="radio"]:checked+label:after {
+    font-size: .8rem;
+    color: #fff;
+}
+
+/* accordion */
+.accordion-card {
+    margin-bottom: .5rem;
+    border-radius: 0;
+    border: none;
+}
+.card.accordion-card:hover {
+    border: none;
+    cursor: pointer;
+}
+.accordion-card .card-header {
+    padding: 0.5rem 1rem;
+    background: var(--primary-dark-color);
+    border-bottom: 0;
+}
+.accordion-card .card-header h6 {
+    color: white !important;
+}
+.accordion-card .card-header::after {
+    font-family: "Font Awesome 5 Free";
+    content: "\f103";
+    top: 9px;
+    right: 12px;
+    font-size: 1rem;
+    color: #fff;
+    position: absolute;
+    font-weight: 600;
+    transition: all 0.5s;
+}
+.accordion-card .card-header[aria-expanded="true"]::after {
+	-webkit-transform: rotate(180deg);
+	-moz-transform: rotate(180deg);
+	transform: rotate(180deg);
+}
+.accordion-card .card-body {
+    border-left: 1px solid var(--disabled-color);
+    border-bottom: 1px solid var(--disabled-color);
+    border-right: 1px solid var(--disabled-color);
+}
+
+/* class to hide back link */
+.cc-resource-map-trace .cc-no-show {
+    display: none;
+}
+
+/* spinner */
+.coolcalc-restui.contains-spinner > span.spinner,
+.coolcalc-restui > .contains-spinner > span.spinner {
+    z-index: 9999;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.2);
+}
+.coolcalc-restui.contains-spinner >  span.spinner .spinner-border,
+.coolcalc-restui > .contains-spinner >  span.spinner .spinner-border {
+    position: relative;
+    left: calc(50% - 2rem);
+    top: calc(50% - 4rem);
+    width: 4rem;
+    height: 4rem;
+    color: white;
+}
+
+/* spinner in button */
+button.contains-spinner > span.spinner {
+   margin-left: .5rem;
+}
+
+/* switch radio style */
+.switch-wrapper .btn .icon {
+    background-color: #fff;
+}
+.switch-wrapper .btn.btn-not-selected .icon i {
+    color: var(--primary-color);
+}
+.switch-wrapper .btn-not-selected {
+    color:#fff;
+    background-color: var(--primary-color);
+}
+.switch-wrapper .btn.btn-selected .icon {
+    background-color: var(--primary-text-color);
+}
+.switch-wrapper .btn.btn-selected .icon i {
+    color: #fff;
+}
+.switch-wrapper .btn-selected {
+    color: var(--primary-text-color);
+    background-color: #fff;
+
+}
+
+/* HVAC System principal inputs */
+#HVACSystem .card .icon{
+    min-width: 50px;
+    min-height: 50px;
+    position: relative;
+}
+#HVACSystem .card .icon i{
+    font-size: 26px;
+    top: calc(50% - 13px);
+}
+
+/* pagination */
+.page-link{
+    color: var(--primary-color);
+}
+
+/* MJ8Report resource */
+.nav-pills .nav-link.active {
+    background-color: var(--primary-color);
+}
+.mj8-report {
+    color: #000000;
+}
+.mj8-report .overview {
+    color: var(--primary-dark-color);
+    border-radius: .625rem  .625rem 0 0;
+    background: linear-gradient( to left, var(--primary-color) 0%, var(--primary-dark-color) 100% ) left bottom #fff no-repeat;
+    background-size: 100% 5px;
+}
+.mj8-report .overview .project:before { 
+    font-family: "Font Awesome 5 Free";
+    content: "\f022";
+    margin-right: .8rem;
+    color: var(--primary-dark-color);
+}
+.mj8-report .overview .address {
+    color: rgba(0, 0, 0, 0.5);
+}
+.mj8-report .overview .logo img {
+    width: 150px;
+    height: auto;
+}
+.mj8-report .title, 
+.mj8-report .underline {
+    margin-left: 0;
+}
+.mj8-report .card .card-header {
+    padding: 10px;
+    background-color: #FFFFFF;
+    border-bottom: none !important;
+}
+.mj8-report .card .table {
+    margin-bottom: 0;
+}
+.table-heating tbody tr:last-child,
+.table-cooling tbody tr:last-child {
+    font-weight: bold;
+}
+.mj8-report .section{
+    margin-top: 2rem;
+}
+.mj8-report .section-title h3 {
+    text-transform: uppercase;
+    color: var(--primary-color);
+}
+.mj8-report .component-loads-item {
+    padding: 1rem;
+    border: 1px solid var(--disabled-color);
+    margin:-1px 0 0 -1px;
+    
+}
+.mj8-report [data-khipu-role="no-data"] {
+    color: var(--primary-dark-text-color);
+
+}
+.mj8-report .component-loads-item .title {
+    font-weight: 500;
+    color: var(--primary-dark-text-color);
+}
+
+.mj8-report .component-loads-item small{
+    text-transform: uppercase;
+    color: var(--primary-dark-text-color);
+}
+
+/* MJ8 detail */
+.mj-detail .card-title {
+    border-bottom: dashed 1px #E9EAEC;
+    margin: 15px 0;
+}
+.mj-detail .card-title h5::before {
+    font-family: "Font Awesome 5 Free";
+    content: "\f022";
+    margin-right: .5rem;
+}
+.mj-detail .card-footer {
+    background-color: #fff;
+}
