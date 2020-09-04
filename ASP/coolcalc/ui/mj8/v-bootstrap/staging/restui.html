@@ -1,0 +1,136 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>    
+    <title>RESTUI</title>
+    <link rel="icon" href="/coolcalc/local-assets/images/favicon.ico" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="CoolCalc">
+    <!--- Leaflet CSS. -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" />
+
+    <!--- Styles for Leaflet geoman-io plugin. -->
+    <link rel="stylesheet" href="https://unpkg.com/@geoman-io/leaflet-geoman-free@latest/dist/leaflet-geoman.css" />
+
+    <!--- Styles for Leaflet.Measure.Path plugin. -->
+    <link rel="stylesheet" href="https://cdn.coolcalc.com/leaflet-measure-path/leaflet-measure-path.css" />
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,700,900&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+    
+    <!-- Bootstrap 4 CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" crossorigin="anonymous">
+ 
+    <!--- CoolCalc REST UI styles -->
+    <link rel="stylesheet" href="https://cdn.coolcalc.com/css/mj8/v-bootstrap/staging/restui.css">
+
+    <!--- Local CoolCalc styles. -->
+    <link rel="stylesheet" href="/coolcalc/local-assets/css/mj8/v-bootstrap/staging/coolcalc.css">
+
+</head>
+<body>
+    <header>
+        <div class="header">
+            <!-- Header -->
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-6 text-center text-sm-left py-2 px-0">
+                        <img src="/coolcalc/local-assets/images/logo.svg" alt="Logo de la empresa" class="img-fluid">
+                    </div>
+                    <div class="col-6 text-center text-sm-right w-100 d-flex align-items-center py-2">
+                        <ul class="nav justify-content-end w-100 p-0 m-0 mr-sm-1 mr-md-4">
+                            <li class="nav-item mr-3">
+                                <a href="/support/v0.3/index.php"><i class="fas fa-question-circle text-white"></i></a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle waves-effect waves-light text-white p-0" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                    <i class="fas fa-user text-white"></i>
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-right dropdown-default" aria-labelledby="navbarDropdownMenuLink">
+                                    <a class="dropdown-item waves-effect waves-light" href="/user/my-account.php">My Account</a>
+                                    <a class="dropdown-item waves-effect waves-light" href="/user/logout.php">Log out</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- ./Header -->
+        </div>
+    </header>
+    <main>
+        <div class="container">
+
+            <!--- div "coolcalc-ui" renders the CoolCalc single page REST UI. -->
+            <div id="coolcalc-ui" class="coolcalc-restui">
+                <div class="contains-spinner">
+                    <span class="spinner">
+                        <div class="spinner-border spinner-border-sm" role="status">
+                            <span class="sr-only">Loading...</span>
+                        </div>
+                    </span>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer>
+    </footer>
+
+    <!--- Google maps library. -->
+    <script src="https://maps.googleapis.com/maps/api/js?libraries=places&key=YOUR_API_KEY_HERE"></script>
+
+    <!--- Google charts library. -->
+    <script src="https://www.gstatic.com/charts/loader.js"></script>
+
+    <!-- Leaflet. -->
+    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"></script>
+
+    <!-- Leaflet.GridLayer.GoogleMutant -->
+    <script src='https://unpkg.com/leaflet.gridlayer.googlemutant@latest/Leaflet.GoogleMutant.js'></script>
+
+    <!-- Leaflet geoman-io plugin. -->
+    <script src="https://unpkg.com/@geoman-io/leaflet-geoman-free@latest/dist/leaflet-geoman.min.js"></script>
+
+    <!-- Leaflet.Measure.Path-->
+    <script src="https://cdn.coolcalc.com/leaflet-measure-path/leaflet-measure-path.js"></script>
+
+    <!--Bootstrap Javascript-->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" crossorigin="anonymous"></script>
+
+    <!--- KhipuJS REST client JavaScript library. -->
+    <script src="https://cdn.coolcalc.com/khipu-js/staging/khipu.js"></script>
+
+    <!-- Map trace library -->
+    <script src="https://cdn.coolcalc.com/javascript/map-trace/staging/mt-widget.js"></script>
+
+    <!--- CoolCalc MJ8 JavaScript library. -->
+    <script src="https://cdn.coolcalc.com/javascript/mj8/shared/staging/mj8.js"></script>
+    <script src="https://cdn.coolcalc.com/javascript/mj8/v-bootstrap/staging/tools.js"></script>
+
+    <!--- Khipu callbacks, these may be framework dependent so we separate them from the main JavaScript library. -->
+    <script src="https://cdn.coolcalc.com/khipu-callbacks/mj8/v-bootstrap/staging/khipu-callbacks.js"></script>
+
+    <!--- Local JavaScript to initialize the CoolCalc application. -->
+    <script src="/coolcalc/javascript/mj8/v-bootstrap/staging/libmj8.js"></script>
+    <script src="/coolcalc/javascript/mj8/v-bootstrap/staging/fun-factory.js"></script>
+
+    <script>
+
+        document.addEventListener("DOMContentLoaded", function (event) {
+            // Initialize the CoolCalc single page REST UI on the requested resource or default MJ8 project list.
+            libMJ8.landingPage(myFunFactory);
+        });
+
+    </script>
+
+</body>
+</html>

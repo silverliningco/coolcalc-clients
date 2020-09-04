@@ -79,13 +79,20 @@
     <Content Include="coolcalc\local-assets\images\logo.svg" />
     <Content Include="coolcalc\local-assets\images\support.svg" />
     <Content Include="coolcalc\local-assets\images\user.svg" />
-    <Content Include="MJ8Report.html" />
-    <Content Include="restui.html" />
+    <Content Include="coolcalc\ui\mj8\v-bootstrap\staging\MJ8Report.html" />
+    <Content Include="coolcalc\ui\mj8\v-bootstrap\staging\restui.html" />
+    <Content Include="README.txt" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="coolcalc\client\staging\api2pdf.ashx.cs">
+      <DependentUpon>api2pdf.ashx</DependentUpon>
+    </Compile>
     <Compile Include="coolcalc\client\staging\dealers.ashx.cs">
       <DependentUpon>dealers.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="coolcalc\client\staging\mj8-reports.ashx.cs">
+      <DependentUpon>mj8-reports.ashx</DependentUpon>
     </Compile>
     <Compile Include="coolcalc\user\session-user.ashx.cs">
       <DependentUpon>session-user.ashx</DependentUpon>
@@ -94,9 +101,10 @@
     <Compile Include="server-side\APIClient.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="coolcalc\user\session-user.json" />
     <Content Include="coolcalc\client\staging\dealers.ashx" />
     <Content Include="coolcalc\user\session-user.ashx" />
+    <Content Include="coolcalc\client\staging\mj8-reports.ashx" />
+    <Content Include="coolcalc\client\staging\api2pdf.ashx" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

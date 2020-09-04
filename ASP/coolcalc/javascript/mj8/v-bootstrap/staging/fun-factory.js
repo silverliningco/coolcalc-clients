@@ -30,14 +30,14 @@
 var myFunFactory = {
 
     // The URL we use to convert HTML to PDF.
-    PDFURL: "/coolcalc/client/staging/api2pdf.php",
+    PDFURL: "/coolcalc/client/staging/api2pdf.ashx",
 
     // The URL we use to email a PDF to a user.
-    emailURL: "/coolcalc/client/staging/send-report.php",
+    emailURL: "/coolcalc/client/staging/send-report.ashx",
 
     // The URL for the static HTML templates for our local resources,
     // ie. the REST resources specific to this client only (not from the CoolCalc API)
-//    localResourceTemplateURL: "/coolcalc/local-templates/mj8/staging/index.php",
+    // localResourceTemplateURL: "/coolcalc/local-templates/mj8/staging/index.php",
     localResourceTemplateURL: "",
 
     // addlHandlers represents our local/custom "render" handlers we want to inject into the CoolCalc library.

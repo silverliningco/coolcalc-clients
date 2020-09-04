@@ -24,17 +24,17 @@ var libMJ8 = {
     // The CoolCalc JavaScript library needs these to re-write the domain in ajax requests.
     APIDomain: "stagingapi.coolcalc.com",
     //localDomain: "stagingui.coolcalc.com",
-    localDomain: "localhost:44349",
+    //localDomain: "localhost:443",
 
     // The entry point for our local server-side library.
     APIClientEndpoint: "/coolcalc/client",
 
     // The URL to the ajax script that downloads MJ8 report JSON from the CoolCalc API.
     // This is normally different from the main CoolCalc client endpoint because it should be accessible without user login.
-    MJ8AjaxURL: "/coolcalc/client/staging/mj8-reports.php",
+    MJ8AjaxURL: "/coolcalc/client/staging/mj8-reports.ashx",
 
     // The URL for the static HTML page where you render HTML MJ8 reports.
-    MJ8ReportURL: "/coolcalc/ui/mj8/v-bootstrap/staging/mj8-report.php",
+    MJ8ReportURL: "/coolcalc/ui/mj8/v-bootstrap/staging/MJ8Report.html",
 
     // Map trace config URL.
     mapTraceConfigURL: "https://cdn.coolcalc.com/config/map-trace/staging/map-trace.json",    

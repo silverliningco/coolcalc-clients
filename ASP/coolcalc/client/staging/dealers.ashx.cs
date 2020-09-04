@@ -27,7 +27,15 @@ namespace ASP.coolcalc.client.staging
             // Substitute the REST API's domain in the request URI so we can forward the request.
             string my_path = context.Request.ServerVariables["REQUEST_URI"].Replace(ConfigurationManager.AppSettings["path_to_client"], "");
             string my_url = "https://" + ConfigurationManager.AppSettings["rest_api_server"] + my_path;
-         
+
+            // To-do:
+            // Implement your own code here to check that the accountNr in the URL /dealers/accountNr/.... 
+            // corresponds to the current user/session info.
+            // This is to prevent some dishonest user from accessing someone else's project list.
+            // ...
+            // If the account nr in the REST URL does not correspond to the session user, respond with a 401 "are you trying to hack me" code.
+            // ...
+
             // Instantiate APIClient library.
             APIClient API = new APIClient();
            
@@ -90,9 +98,6 @@ namespace ASP.coolcalc.client.staging
                 else
                 {
                     context.Response.StatusCode = 500;
-                    context.Response.Write(my_headers);
-                    context.Response.Write(result);
-                    context.Response.Write(my_url);
                     context.Response.Write("<h3>Well this isn\'t supposed to happen now, is it?</h3>");
                 }
 
