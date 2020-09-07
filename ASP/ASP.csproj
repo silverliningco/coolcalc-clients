@@ -72,7 +72,6 @@
   <ItemGroup>
     <Content Include="coolcalc\javascript\mj8\v-bootstrap\staging\fun-factory.js" />
     <Content Include="coolcalc\javascript\mj8\v-bootstrap\staging\libmj8.js" />
-    <Content Include="coolcalc\javascript\mj8\v-bootstrap\staging\README.txt" />
     <Content Include="coolcalc\local-assets\css\mj8\v-bootstrap\staging\coolcalc.css" />
     <Content Include="coolcalc\local-assets\images\favicon.ico" />
     <Content Include="coolcalc\local-assets\images\log-out.svg" />

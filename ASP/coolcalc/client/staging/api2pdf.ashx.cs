@@ -16,6 +16,9 @@ namespace ASP.coolcalc.client.staging
 
         public void ProcessRequest(HttpContext context)
         {
+            // Implement your own method to Check if the user has visited an HTML page prior to requesting this resource, Because this page is open for any in internet.
+            // ...
+
             // Read input data from POST request.
             if (context.Request.HttpMethod == "POST")
             {

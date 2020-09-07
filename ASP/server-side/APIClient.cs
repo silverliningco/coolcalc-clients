@@ -43,20 +43,24 @@ namespace ASP.server_side
             request.Method = HTTP_method;
             
             // Add headers to request.
-            foreach (KeyValuePair<string, string> header in headers)
+            if (headers != null)
             {
-                switch (header.Key)
+                foreach (KeyValuePair<string, string> header in headers)
                 {
-                    case "Accept":
-                        request.Accept = header.Value;
-                        break;
-                    case "Content-Type":
-                        request.ContentType = header.Value;
-                        break;
-                    default:
-                        // Do nothing.
-                        break;
+                    switch (header.Key)
+                    {
+                        case "Accept":
+                            request.Accept = header.Value;
+                            break;
+                        case "Content-Type":
+                            request.ContentType = header.Value;
+                            break;
+                        default:
+                            // Do nothing.
+                            break;
+                    }
                 }
+
             }
 
             // HTTP basic authentication.

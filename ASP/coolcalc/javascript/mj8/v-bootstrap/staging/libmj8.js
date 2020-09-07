@@ -24,7 +24,7 @@ var libMJ8 = {
     // The CoolCalc JavaScript library needs these to re-write the domain in ajax requests.
     APIDomain: "stagingapi.coolcalc.com",
     //localDomain: "stagingui.coolcalc.com",
-    //localDomain: "localhost:443",
+    localDomain: "localhost:443",
 
     // The entry point for our local server-side library.
     APIClientEndpoint: "/coolcalc/client",
